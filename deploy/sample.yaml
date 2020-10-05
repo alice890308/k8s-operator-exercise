@@ -1,0 +1,12 @@
+apiVersion: lsalab.nthu/v1alpha1
+kind: PodMonitor
+metadata:
+  name: podmonitors.lsalab.nthu
+  labels:
+    app: webserver
+spec:
+  containers:
+  - name: pm
+    image: wrre/hello-kubernetes-client:v1
+    ports:
+    - containerPort: 8080
